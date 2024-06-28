@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "autoRay (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "autoRay (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
