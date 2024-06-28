@@ -19,6 +19,7 @@ using Microsoft.UI;
 using System.Xml.Linq;
 using WinUIEx;
 using Windows.Graphics;
+using Microsoft.Win32;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -58,6 +59,8 @@ namespace autoRay
                 process.StartInfo.Arguments = "/f /im v2rayN.exe";
                 process.Start();
                 process.WaitForExit();
+                using (var registryKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Internet Settings", true))
+                { registryKey.SetValue("ProxyEnable", 1, RegistryValueKind.DWord); }
                 Environment.Exit(0);
             }
             else if (v2rayNRunning == false)
