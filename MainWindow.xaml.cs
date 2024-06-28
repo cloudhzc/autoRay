@@ -60,7 +60,7 @@ namespace autoRay
                 process.Start();
                 process.WaitForExit();
                 using (var registryKey = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Internet Settings", true))
-                { registryKey.SetValue("ProxyEnable", 1, RegistryValueKind.DWord); }
+                { registryKey.SetValue("ProxyEnable", 0, RegistryValueKind.DWord); }
                 Environment.Exit(0);
             }
             else if (v2rayNRunning == false)

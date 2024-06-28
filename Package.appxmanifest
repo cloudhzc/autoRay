@@ -10,7 +10,7 @@
   <Identity
     Name="autoRay"
     Publisher="CN=Hu Zhe Cheng"
-    Version="1.1.0.0" />
+    Version="1.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="46d823fd-786a-454b-ace7-c1ff2b67e068" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
