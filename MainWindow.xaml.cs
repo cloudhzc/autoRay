@@ -39,9 +39,6 @@ namespace autoRay
         {
             if (v2rayNRunning == true)
             {
-                WindowManager.Get(this).IsResizable = true;
-                AppWindow.Resize(new SizeInt32(200, 325));
-                WindowManager.Get(this).IsResizable = false;
                 // Create a process object targeting "taskkill"
                 Process process = new Process();
                 process.StartInfo.FileName = "taskkill";
