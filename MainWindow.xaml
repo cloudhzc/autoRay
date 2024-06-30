@@ -23,7 +23,7 @@
             </StackPanel>
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Border BorderThickness="20">
-                    <Button x:Name="action" Content="" Click="action_Click"/>
+                    <Button x:Name="action" Content="" Click="action_Click" IsEnabled="True"/>
                 </Border>
             </StackPanel>
         </StackPanel>

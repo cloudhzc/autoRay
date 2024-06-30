@@ -39,6 +39,9 @@ namespace autoRay
         {
             if (v2rayNRunning == true)
             {
+                action.IsEnabled = false;
+                statusDot.Fill = new SolidColorBrush(Colors.Orange);
+                statusText.Text = " Stopping v2rayN task.";
                 // Create a process object targeting "taskkill"
                 Process process = new Process();
                 process.StartInfo.FileName = "taskkill";
@@ -47,11 +50,15 @@ namespace autoRay
                 process.StartInfo.Arguments = "/f /im v2rayN.exe";
                 process.Start();
                 process.WaitForExit();
+                statusText.Text = " Turning system proxy off.";
                 SetConnectionProxy(connectionName: null, strProxy: null, exceptions: null, type: 1);
                 Environment.Exit(0);
             }
             else if (v2rayNRunning == false)
             {
+                action.IsEnabled = false;
+                statusDot.Fill = new SolidColorBrush(Colors.Orange);
+                statusText.Text = " Starting v2rayN task.";
                 // Define the process start information
                 ProcessStartInfo startInfo = new ProcessStartInfo();
                 startInfo.FileName = @"D:\v2rayN\v2rayN.exe"; // Use verbatim string for paths with special characters
